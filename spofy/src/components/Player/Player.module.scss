@@ -1,0 +1,65 @@
+.container{
+    @apply flex fixed items-center justify-between bottom-0 bg-neutral-900 text-white w-full z-10 px-5;
+    height: 10%; 
+    
+    .block__soundInfo{
+        @apply flex flex-row items-center;
+        .sound__logo{
+            @apply h-14 w-14 mr-3;
+        }
+        .sound__texts{
+            @apply flex flex-col h-auto;
+
+            .sound__name{
+                @apply text-sm self-start;
+            }
+            .sound__author{
+                @apply text-zinc-500 ;
+            }
+        }
+    }
+    .block__player{
+        @apply flex flex-col items-center;
+        .playerTop{
+            @apply flex flex-row w-52 justify-center;
+            .playerTopButtons{
+                @apply h-7 w-7 ml-3 
+                first:ml-0;
+                
+                svg{
+                    @apply h-7 w-7;
+                    transition: 0.5s;
+                }
+                svg:hover{
+                    fill:#13DF00;
+                }
+            }
+            
+        }
+        .playerBottom{
+            @apply flex flex-row items-center mt-2;
+            .playerTimes{
+                @apply text-xs text-gray-400;
+            }
+            .RangePlayer{
+                @apply w-52 mx-3
+            }
+        }
+    }
+    .block__settings{
+        @apply flex flex-row;
+        svg{
+            @apply h-6 w-6 mr-3;
+            transition: 0.5s;
+        }
+        svg:hover{
+            stroke: #13DF00
+        }
+        .block__volume{
+            @apply flex flex-row;
+            .RangeVol{
+                @apply w-24
+            }
+        }
+    }
+}

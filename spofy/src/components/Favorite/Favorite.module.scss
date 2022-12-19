@@ -1,0 +1,94 @@
+.Favorite {
+	@apply h-full w-full;
+	background-color: #085c00;
+	.FavoriteHeader {
+		@apply flex flex-row h-1/4 w-full  items-center px-5;
+
+		.PlaylistLogo {
+			@apply flex items-center justify-center h-44 w-44 rounded-lg mr-4;
+			background: linear-gradient(
+				135deg,
+				rgba(19, 223, 0, 1) 0%,
+				rgba(7, 87, 0, 1) 50%,
+				rgba(0, 0, 0, 1) 100%
+			);
+			svg {
+				@apply fill-white w-14 h-14;
+			}
+		}
+		.PlaylistInfo {
+			@apply flex flex-col justify-between h-36;
+
+			.PlaylistText {
+				@apply text-white font-semibold text-lg;
+			}
+
+			.PlaylistName {
+				@apply text-white text-5xl font-bold uppercase;
+			}
+		}
+	}
+	.MainBlock {
+		@apply h-3/4 w-full px-5;
+		background: rgba(0, 0, 0, 0.78);
+		.BlockControl {
+			@apply flex justify-between w-full py-3;
+
+			.BlockRight {
+				@apply flex items-center;
+
+				.play__button {
+					@apply flex items-center justify-center rounded-full h-11 w-11 hover:scale-105;
+					background: #13df00;
+					transition: 0.5s;
+				}
+				.play__button svg {
+					@apply h-8 w-8;
+				}
+				.DownloadPlaylist {
+					@apply ml-5 h-9 w-9 rounded-full;
+				}
+				.DownloadPlaylist svg {
+					@apply stroke-gray-600 h-9 w-9 hover:stroke-spofy;
+					transition: 0.3s;
+				}
+			}
+			.BlockLeft {
+				@apply flex items-center;
+
+				.Search {
+					@apply h-7 w-7 mr-3;
+				}
+				.Search svg {
+					@apply stroke-gray-600 hover:stroke-spofy;
+					transition: 0.3s;
+				}
+				.Sorting {
+					@apply text-gray-600 uppercase text-lg font-bold hover:text-spofy;
+					transition: 0.3s;
+				}
+			}
+		}
+		.BlockInfo {
+			@apply flex w-full items-center justify-between px-3 border-b-2 border-gray-700;
+			.BlockName {
+				@apply flex;
+
+				.InfoTextNumber {
+					@apply text-xl font-medium text-gray-600 cursor-default;
+				}
+
+				.InfoText {
+					@apply ml-3;
+				}
+			}
+
+			.InfoText {
+				@apply text-xl font-medium text-gray-600 uppercase cursor-default hover:text-spofy;
+			}
+			svg {
+				@apply w-5 h-5 stroke-gray-600 hover:stroke-spofy;
+			}
+		}
+	}
+}

@@ -1,0 +1,34 @@
+.ProfilInfo{
+    @apply flex items-center justify-center w-full h-full;
+    background: linear-gradient(41deg, rgba(0,0,0,1) 0%, rgba(7,87,0,1) 50%, rgba(19,223,0,1) 100%);
+
+    .profilBlock{
+        @apply flex flex-col bg-neutral-900 rounded-2xl py-5 px-10 justify-between border-4 border-white relative;
+        height: 75%;
+        width: 25%;
+        box-shadow: 0 0 5px #fff, 0 0 25px #fff,;
+
+        .profilHeader{
+            @apply uppercase text-white font-bold text-3xl self-center;
+        }
+        .buttonExit{
+            @apply absolute top-6 right-6 h-7 w-7;
+            stroke: #fff;
+            transition: 0.5s
+        }
+        .buttonExit:hover{
+            stroke: #13DF00;
+        }
+        .userInfo{
+            @apply flex flex-col;
+            
+            .userInfoText{
+                @apply text-white text-xl pb-5
+                last:pb-0;
+            }
+            .userInfoText span{
+                color: #13DF00;
+            }
+        }
+    }
+}

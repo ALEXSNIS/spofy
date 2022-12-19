@@ -1,0 +1,86 @@
+.butttonExitProfile {
+	@apply flex relative self-center justify-center font-semibold text-lg w-52 py-3 text-base overflow-hidden;
+	color: #13df00;
+	transition: 0.5s;
+}
+
+.butttonExitProfile:hover {
+	@apply text-white rounded-md;
+	background: #13df00;
+	box-shadow: 0 0 5px #13df00, 0 0 25px #13df00;
+}
+
+.butttonExitProfile span {
+	@apply block absolute;
+}
+
+.butttonExitProfile span:nth-child(1) {
+	@apply top-0 w-full h-1;
+	left: -100%;
+	background: linear-gradient(90deg, transparent, #13df00);
+	animation: btn-anim1 2s linear infinite;
+}
+
+@keyframes btn-anim1 {
+	0% {
+		left: -100%;
+	}
+	50%,
+	100% {
+		left: 100%;
+	}
+}
+
+.butttonExitProfile span:nth-child(2) {
+	@apply right-0 w-1 h-full;
+	top: -100%;
+	background: linear-gradient(180deg, transparent, #13df00);
+	animation: btn-anim2 2s linear infinite;
+	animation-delay: 0.5s;
+}
+
+@keyframes btn-anim2 {
+	0% {
+		top: -100%;
+	}
+	50%,
+	100% {
+		top: 100%;
+	}
+}
+
+.butttonExitProfile span:nth-child(3) {
+	@apply bottom-0 w-full h-1;
+	right: -100%;
+	background: linear-gradient(270deg, transparent, #13df00);
+	animation: btn-anim3 2s linear infinite;
+	animation-delay: 1s;
+}
+
+@keyframes btn-anim3 {
+	0% {
+		right: -100%;
+	}
+	50%,
+	100% {
+		right: 100%;
+	}
+}
+
+.butttonExitProfile span:nth-child(4) {
+	@apply left-0 w-1 h-full;
+	bottom: -100%;
+	background: linear-gradient(360deg, transparent, #13df00);
+	animation: btn-anim4 2s linear infinite;
+	animation-delay: 1.5s;
+}
+
+@keyframes btn-anim4 {
+	0% {
+		bottom: -100%;
+	}
+	50%,
+	100% {
+		bottom: 100%;
+	}
+}

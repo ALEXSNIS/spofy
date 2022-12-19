@@ -1,0 +1,60 @@
+.MusicBlock {
+	@apply flex flex-col;
+
+	.text {
+		@apply flex flex-row justify-between text-white items-end;
+
+		.NameBlock {
+			@apply font-mono text-2xl font-bold;
+		}
+		.BlockALL {
+			@apply font-mono text-xs font-normal text-gray-500
+            hover:text-white duration-200;
+		}
+	}
+	.blocks {
+		@apply flex flex-row w-auto mb-10 mt-4;
+		height: 318px;
+
+		.playlist {
+			@apply bg-zinc-700 rounded-lg p-4 w-52;
+			height: 318px;
+			transition: 0.5s;
+
+			.playlist__img {
+				@apply w-44 h-44 bg-black mb-10 rounded-lg;
+			}
+			.container {
+				@apply flex flex-row justify-between items-center;
+				.container__info {
+					@apply flex flex-col;
+
+					.playlist__name {
+						@apply font-semibold text-base font-mono text-white mb-7;
+					}
+					.playlist__actors {
+						@apply font-mono font-medium text-zinc-500 text-xs;
+					}
+				}
+				.play__button {
+					@apply rounded-full px-1 h-11 w-11 opacity-0;
+					background: #13df00;
+					transition: 0.5s;
+				}
+				.play__button svg {
+					@apply h-9 w-9;
+				}
+			}
+		}
+		.playlist + .playlist {
+			@apply ml-9;
+		}
+		.playlist:hover .play__button {
+			@apply opacity-100;
+		}
+		.playlist:hover {
+			box-shadow: 0 0 5px #13df00, 0 0 12.5px #13df00, 0 0 25px #13df00,
+				0 0 100px #13df00;
+		}
+	}
+}

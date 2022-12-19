@@ -1,0 +1,39 @@
+.MediaBlock {
+	@apply h-full w-full py-7 px-5;
+	.NameFolder {
+		@apply text-white uppercase text-2xl font-bold mb-4;
+	}
+	.FavoriteBlock {
+		@apply flex flex-col w-1/4 h-60 p-5 rounded-3xl justify-end;
+		background: linear-gradient(
+			135deg,
+			rgba(19, 223, 0, 1) 0%,
+			rgba(7, 87, 0, 1) 40%,
+			rgba(0, 0, 0, 1) 72%
+		);
+
+		.DivInfo {
+			@apply flex flex-row justify-between items-center;
+			.BlockRight {
+				@apply flex flex-col;
+				.Title {
+					@apply text-white font-semibold text-lg;
+				}
+				.BlockRightInfo {
+					@apply text-white font-normal text-base;
+				}
+			}
+			.play__button {
+				@apply rounded-full px-1 h-11 w-11 opacity-0;
+				background: #13df00;
+				transition: 0.5s;
+			}
+			.play__button svg {
+				@apply h-9 w-9;
+			}
+		}
+	}
+	.FavoriteBlock:hover .play__button {
+		@apply opacity-100;
+	}
+}

@@ -1,0 +1,51 @@
+.Tariff {
+	@apply flex items-center justify-center w-full h-full;
+	background: linear-gradient(
+		41deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(7, 87, 0, 1) 50%,
+		rgba(19, 223, 0, 1) 100%
+	);
+
+	.TariffBlock {
+		@apply flex flex-col bg-neutral-900 rounded-2xl py-5 px-10 justify-between border-4 border-white relative;
+		height: 75%;
+		width: 25%;
+		box-shadow: 0 0 5px #fff, 0 0 25px #fff;
+
+		.Tariffs {
+			@apply flex flex-col;
+			h1 {
+				@apply uppercase text-white font-bold text-3xl self-center mb-44;
+			}
+			.buttonExit {
+				@apply absolute top-6 right-6 h-7 w-7;
+				stroke: #fff;
+				transition: 0.5s;
+			}
+			.buttonExit:hover {
+				stroke: #13df00;
+			}
+			.TariffInfo {
+				@apply flex flex-col;
+			}
+			.BlockPlan {
+				@apply flex flex-row w-full justify-between pb-5 items-center
+							last:pb-0;
+				.PlanName {
+					@apply text-white text-xl;
+				}
+				.PlanName span {
+					color: #13df00;
+				}
+				.buttonInfo {
+					@apply border-2 font-semibold text-base px-4 py-1 rounded-2xl border-spofy text-spofy;
+					transition: 0.5s;
+				}
+				.buttonInfo:hover {
+					@apply bg-spofy text-white;
+				}
+			}
+		}
+	}
+}

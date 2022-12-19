@@ -1,0 +1,61 @@
+.Nav {
+	@apply flex  bg-black fixed left-0 text-white flex-col justify-between;
+	height: 90%;
+	width: 16%;
+
+	nav {
+		.Logo {
+			@apply flex items-center justify-center mt-16 mb-24 py-2 w-3/4 border-4 rounded-md  mx-8 border-spofy;
+			.Logo__img {
+				@apply h-14 w-14  mr-1;
+			}
+			.Logo__text {
+				@apply text-5xl font-mono font-bold text-white;
+				text-shadow: 4px 4px 2px #13df00;
+			}
+		}
+		.active,
+		.nav__link {
+			@apply flex ml-5 items-center mb-5
+							last:mb-0;
+			.link__img {
+				@apply h-6 w-6 mr-4;
+			}
+
+			.link__text {
+				@apply relative text-white 
+    						before:scale-x-0 origin-bottom-right  
+    					hover:text-black duration-100;
+				transition: 0.5s;
+			}
+			.link__text:hover::before {
+				@apply scale-x-100 origin-bottom-left;
+			}
+			.link__text::before {
+				content: ' ';
+				@apply block absolute;
+				inset: 0 0 0 0;
+				background: #13df00;
+				z-index: -1;
+				transition: transform 0.3s ease;
+			}
+		}
+		.active .link__text {
+			@apply text-black bg-spofy cursor-default before:hidden;
+		}
+	}
+	.Download__app {
+		@apply flex items-center self-center mb-10 text-gray-500;
+		transition: 0.5s;
+		.download__img {
+			@apply h-4 w-4;
+		}
+		.download__text {
+			@apply text-base;
+		}
+	}
+	.Download__app:hover {
+		stroke: #13df00;
+		color: #13df00;
+	}
+}

@@ -1,0 +1,42 @@
+.PlanBlock {
+	@apply flex items-center justify-center w-full h-full;
+	background: linear-gradient(
+		41deg,
+		rgba(0, 0, 0, 1) 0%,
+		rgba(7, 87, 0, 1) 50%,
+		rgba(19, 223, 0, 1) 100%
+	);
+
+	.BlockInfo {
+		@apply flex flex-col bg-neutral-900 rounded-2xl py-5 px-10 justify-between border-4 border-white relative;
+		height: 75%;
+		width: 25%;
+		box-shadow: 0 0 5px #fff, 0 0 25px #fff;
+
+		.PlanBlockHeader {
+			@apply flex flex-row w-full justify-between items-center;
+
+			.BlockHeaderButton {
+				@apply h-7 w-7 stroke-white
+						 hover:stroke-spofy;
+				transition: 0.5s;
+			}
+
+			.PlanName {
+				@apply uppercase text-white font-bold text-3xl;
+			}
+		}
+
+		.PlanInfo {
+			@apply flex flex-col;
+
+			.PlanInfoText {
+				@apply text-white text-xl pb-5
+                last:pb-0;
+			}
+			.PlanInfoText span {
+				@apply text-spofy;
+			}
+		}
+	}
+}
